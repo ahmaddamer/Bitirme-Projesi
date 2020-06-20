@@ -1,0 +1,70 @@
+.example-card {
+    max-width: 350px;
+    max-height: 200px;
+    text-align: center;
+}
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    text-align: center;
+}
+img
+{
+    height:100px
+}
+mat-grid-tile {
+    margin-right: 200px;
+    display: inline;
+}
+div.grid
+{
+margin-left: 300px;
+    margin-top: 40px;
+}
+a:link{
+    text-decoration: none;
+
+}
+mat-card.example-card
+{
+    border-radius: 15%;
+    background-size: cover;
+}
+.back_ground
+{
+    background: url('../../assets/images/background.jpg');
+    height: 1000px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.academic
+{
+    background: url('../../assets/images/akademic.jpg');
+    background-size: cover;
+    text-align: center;
+}
+.student
+{
+    background: url('../../assets/images/student.jpg');
+    background-size: cover;
+    text-align: center;
+}
+.idari
+{
+    background: url('../../assets/images/idari.png');
+    background-size: cover;
+    text-align: center;
+}
+.ogrenciisleri
+{
+    background: url('../../assets/images/ogrenciler.png');
+    background-size: cover;
+    text-align: center;
+}
+.damascus
+{
+    background: url('../../assets/images/dmlogo.png');
+    background-size: cover;
+    text-align: center;
+}

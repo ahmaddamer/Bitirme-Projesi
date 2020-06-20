@@ -1,0 +1,49 @@
+<style>
+  button
+  {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    margin-left: 300px;
+
+  }
+</style>
+<body style="background-color: antiquewhite;">
+  <div style="width: 50%; position: relative; left: 300px; top: 70px;">
+  <div style="background-color: cadetblue;">
+<button class="btn btn-primary" type="button" [routerLink]="['Ogretim']">acilacakdersler</button>
+</div>
+<div style="background-color:aliceblue;">
+<button class="btn btn-secondary" type="button" id="sec" (click)="secimacma()"></button>
+
+<!--   ------------------------------                -->
+<span style="display: inline;position: relative; left: 100px; top: -90px;">
+<mat-form-field>
+  <mat-label>Hangi Dönem ?</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let d of Donem" [value]="d.value" (click)="get_Donem(d.value)">
+
+      {{d.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</span>
+<!--          --------------  -------- -->
+</div>
+
+    <div style="background-color: cadetblue;width: 50%;display: inline-block;">
+      <button class="btn btn-danger" type="button"
+       (click)="Hesap()" style="margin-left: 3px;">Ortalamalar Hesaplama</button>
+
+    </div>
+    <div style="background-color: blueviolet;width:
+    50%;display: inline-block;">
+
+    <button class="btn btn-primary" type="button"
+    (click)="But()" id="But" style="margin-left: 135px;" >Bütünleme Başlat</button>
+
+  </div>
+  </div>
+
+</body>
+

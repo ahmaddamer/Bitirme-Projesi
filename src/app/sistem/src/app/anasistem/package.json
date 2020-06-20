@@ -1,0 +1,27 @@
+{
+  "name": "anasistem",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "keywords"
+  ],
+  "author": "ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-material-design": "^4.1.2",
+    "chart.js": "^2.9.3",
+    "firebase": "^7.7.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.33",
+    "@types/js-cookie": "^2.2.6"
+  }
+}

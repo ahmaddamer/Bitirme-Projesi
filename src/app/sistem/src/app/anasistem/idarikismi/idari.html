@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+   
+<div id="rcorners2">
+    <h1 id="ab">IdariKismi</h1>
+    <img src="../../../assets/images/idari.png" height="90px" width="90px" style="margin-left: 50%">
+    <div class="container">
+        <form action="/action_page.php" class="was-validated">
+            <div class="form-group">
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                       required style="height: 40px;font-size: 40px;margin-top: 20px"
+                        [formControl]="name" [matAutocomplete]="auto"
+                        aria-label="name"
+                        matInput>
+
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option"
+                             (mouseover)="fcall(option)">
+                             <img src="../../../assets/images/idari.png" 
+                             height="20px" width="20px" style="margin-left: 0">  
+                            
+                              {{option}}
+                            </mat-option>
+                          </mat-autocomplete>
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"
+                       required style="height: 40px;font-size: 40px;margin-top: 40px" [formControl]="password">
+            </div>
+            <button type="submit" class="btn btn-primary" style="height: 60px;width: 140px;" (click)="submitb()">
+                <h1>Giriş</h1></button>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>

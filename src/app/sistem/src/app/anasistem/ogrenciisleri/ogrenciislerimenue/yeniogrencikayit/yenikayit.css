@@ -1,0 +1,16 @@
+
+div
+{
+    width: 100%;
+}
+mat-form-field
+{
+font-size: 20px;
+}
+mat-option{
+/* {background-color: black; */
+}
+
+mat-grid-tile {
+    /* background: lightblue; */
+  }

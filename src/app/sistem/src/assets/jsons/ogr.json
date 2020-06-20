@@ -1,0 +1,480 @@
+{
+  "AlinmisDersler" : {
+    "2019-2020" : {
+      "120201099" : {
+        "0" : {
+          "Alan_sayisi" : "50",
+          "Ders" : "algo",
+          "Dr" : "yasar",
+          "id" : "120201099",
+          "kredi" : "3",
+          "saat" : "saat3",
+          "yil" : "y4"
+        },
+        "1" : {
+          "Alan_sayisi" : "50",
+          "Ders" : "algo22",
+          "Dr" : "yasar",
+          "id" : "120201099",
+          "kredi" : "4",
+          "saat" : "saat4",
+          "yil" : "y4"
+        },
+        "2" : {
+          "Alan_sayisi" : "50",
+          "Ders" : "algo33",
+          "Dr" : "yasar",
+          "id" : "120201099",
+          "kredi" : "5",
+          "saat" : "saat5",
+          "yil" : "y4"
+        },
+        "Ogretim" : "IIOgretim",
+        "Onay" : true,
+        "name" : "tetaboz",
+        "soyad" : "teta"
+      },
+      "160201099" : {
+        "0" : {
+          "Ders" : "DerslerA",
+          "Dr" : "yasar",
+          "OgrenciSayisi" : "40",
+          "id" : "160201099",
+          "kredi" : "3",
+          "saat" : "saat2",
+          "yil" : "4"
+        },
+        "Ogretim" : "IOgretim",
+        "Onay" : true,
+        "name" : "Ahmed",
+        "soyad" : "Damer"
+      },
+      "170201099" : {
+        "0" : {
+          "Alan_sayisi" : "50",
+          "Ders" : "algo",
+          "Dr" : "yasar",
+          "id" : "170201099",
+          "kredi" : "3",
+          "saat" : "saat3",
+          "yil" : "y4"
+        },
+        "1" : {
+          "Alan_sayisi" : "50",
+          "Ders" : "algo22",
+          "Dr" : "yasar",
+          "id" : "170201099",
+          "kredi" : "4",
+          "saat" : "saat4",
+          "yil" : "y4"
+        },
+        "2" : {
+          "Alan_sayisi" : "50",
+          "Ders" : "algo33",
+          "Dr" : "yasar",
+          "id" : "170201099",
+          "kredi" : "5",
+          "saat" : "saat5",
+          "yil" : "y4"
+        },
+        "Ogretim" : "IOgretim",
+        "Onay" : true,
+        "name" : "Fahed",
+        "soyad" : "Damer"
+      },
+      "IIOgretim" : {
+        "algo" : {
+          "120201099" : "tetaboz teta"
+        },
+        "algo22" : {
+          "120201099" : "tetaboz teta"
+        },
+        "algo33" : {
+          "120201099" : "tetaboz teta"
+        }
+      },
+      "IOgretim" : {
+        "DerslerA" : {
+          "160201099" : "Ahmed Damer"
+        },
+        "algo" : {
+          "160201099" : "Ahmed Damer",
+          "170201099" : "Fahed Damer"
+        },
+        "algo22" : {
+          "170201099" : "Fahed Damer"
+        },
+        "algo33" : {
+          "170201099" : "Fahed Damer"
+        }
+      },
+      "basariliBasarsiz" : {
+        "IIOgretim" : {
+          "algo" : {
+            "120201099" : {
+              "Donem_ort" : 80,
+              "Final" : "80",
+              "Harf_Notu" : "BA",
+              "T_standart" : 50,
+              "id" : "120201099",
+              "name" : "tetaboz teta",
+              "proje" : "",
+              "vize" : "80"
+            },
+            "Ders_Ortalamasi" : 80
+          }
+        },
+        "IOgretim" : {
+          "algo" : {
+            "160201099" : {
+              "Donem_ort" : 100,
+              "Final" : "100",
+              "Harf_Notu" : "AA",
+              "T_standart" : 52.484429231195975,
+              "id" : "160201099",
+              "name" : "Ahmed Damer",
+              "proje" : "",
+              "vize" : "100"
+            },
+            "170201099" : {
+              "Donem_ort" : 74,
+              "Final" : "70",
+              "Harf_Notu" : "AA",
+              "T_standart" : 47.515570768804025,
+              "id" : "170201099",
+              "name" : "Fahed Damer",
+              "proje" : "",
+              "vize" : "80"
+            },
+            "Ders_Ortalamasi" : 87,
+            "Standart_Sapma" : 18.384776310850235
+          },
+          "algo22" : {
+            "160201099" : {
+              "Donem_ort" : 88,
+              "Final" : "100",
+              "Harf_Notu" : "BA",
+              "T_standart" : 57.07106781186546,
+              "id" : "160201099",
+              "name" : "Ahmed Damer",
+              "proje" : "100",
+              "vize" : "40"
+            },
+            "170201099" : {
+              "Donem_ort" : 80.8,
+              "Final" : "100",
+              "Harf_Notu" : "BA",
+              "T_standart" : 42.92893218813451,
+              "id" : "170201099",
+              "name" : "Fahed Damer",
+              "proje" : "100",
+              "vize" : "4"
+            },
+            "Ders_Ortalamasi" : 84.4,
+            "Standart_Sapma" : 5.091168824543144
+          },
+          "algo33" : {
+            "160201099" : {
+              "Donem_ort" : 70,
+              "Final" : "70",
+              "Harf_Notu" : "CC",
+              "T_standart" : 42.928932188134524,
+              "id" : "160201099",
+              "name" : "Ahmed Damer",
+              "proje" : "70",
+              "vize" : "70"
+            },
+            "170201099" : {
+              "Donem_ort" : 71.5,
+              "Final" : "67",
+              "Harf_Notu" : "BA",
+              "T_standart" : 57.071067811865476,
+              "id" : "170201099",
+              "name" : "Fahed Damer",
+              "proje" : "90",
+              "vize" : "66"
+            },
+            "Ders_Ortalamasi" : 70.75,
+            "Standart_Sapma" : 1.0606601717798212
+          }
+        }
+      }
+    }
+  },
+  "Averages" : {
+    "2019-2020" : {
+      "120201099" : {
+        "Average" : {
+          "Genel_Ortalama" : 3.67,
+          "Toplam_Kredi" : 15
+        },
+        "algo" : {
+          "Harf" : "BA",
+          "Harf_etkisi" : 3.5,
+          "Puan" : 80,
+          "kredi" : 4
+        },
+        "algo22" : {
+          "Harf" : "AA",
+          "Harf_etkisi" : 4,
+          "Puan" : 99,
+          "kredi" : 5
+        },
+        "algo33" : {
+          "Harf" : "BA",
+          "Harf_etkisi" : 3.5,
+          "Puan" : 88.1,
+          "kredi" : 6
+        }
+      },
+      "130201099" : {
+        "Average" : {
+          "Genel_Ortalama" : 3.72,
+          "Toplam_Kredi" : 9
+        },
+        "algo" : {
+          "Harf" : "AA",
+          "Harf_etkisi" : 4,
+          "Puan" : 100,
+          "kredi" : 4
+        },
+        "algo22" : {
+          "Harf" : "BA",
+          "Harf_etkisi" : 3.5,
+          "Puan" : 80,
+          "kredi" : 5
+        }
+      },
+      "160201099" : {
+        "Average" : {
+          "Genel_Ortalama" : 3.03,
+          "Toplam_Kredi" : 15
+        },
+        "algo" : {
+          "Harf" : "AA",
+          "Harf_etkisi" : 4,
+          "Puan" : 100,
+          "kredi" : 4
+        },
+        "algo22" : {
+          "Harf" : "BA",
+          "Harf_etkisi" : 3.5,
+          "Puan" : 88,
+          "kredi" : 5
+        },
+        "algo33" : {
+          "Harf" : "CC",
+          "Harf_etkisi" : 2,
+          "Puan" : 70,
+          "kredi" : 6
+        }
+      },
+      "170201099" : {
+        "Average" : {
+          "Genel_Ortalama" : 3.63,
+          "Toplam_Kredi" : 15
+        },
+        "algo" : {
+          "Harf" : "AA",
+          "Harf_etkisi" : 4,
+          "Puan" : 74,
+          "kredi" : 4
+        },
+        "algo22" : {
+          "Harf" : "BA",
+          "Harf_etkisi" : 3.5,
+          "Puan" : 80.8,
+          "kredi" : 5
+        },
+        "algo33" : {
+          "Harf" : "BA",
+          "Harf_etkisi" : 3.5,
+          "Puan" : 71.5,
+          "kredi" : 6
+        }
+      }
+    }
+  },
+  "Donem" : "BAHAR",
+  "Ogrenciler" : {
+    "120201099" : {
+      "Ogretim" : "IIOgretim",
+      "address" : "izmit",
+      "gender" : "Erkek",
+      "name" : "tetaboz",
+      "pass" : "aaaa",
+      "surename" : "teta",
+      "tarih" : "3/26/2020",
+      "yil" : "4"
+    },
+    "160201099" : {
+      "Ogretim" : "IOgretim",
+      "address" : "izmit",
+      "gender" : "Erkek",
+      "name" : "Ahmed",
+      "pass" : "aaaa",
+      "surename" : "Damer",
+      "tarih" : "3/19/2020",
+      "yil" : "4"
+    },
+    "170201099" : {
+      "Ogretim" : "IOgretim",
+      "address" : "abcdefg",
+      "gender" : "Erkek",
+      "name" : "Fahed",
+      "pass" : "aaaa",
+      "surename" : "Damer",
+      "tarih" : "3/18/2020",
+      "yil" : "2"
+    }
+  },
+  "Onaylananlar" : "160201099",
+  "Siciller" : {
+    "2019-2020" : {
+      "BAHAR" : {
+        "IOgretim" : {
+          "160201099" : {
+            "Average" : {
+              "Genel_Ortalama" : 1.97,
+              "Toplam_Kredi" : 15
+            },
+            "algo" : {
+              "Donem_ort" : 100,
+              "Final" : "100",
+              "Harf" : "AA",
+              "Harf_etkisi" : 4,
+              "Kredi" : 4,
+              "Ogrenci_standart_sapma" : 52.484429231195975,
+              "Sinif_Ders_Ortalamasi" : 87,
+              "Sinif_Standart_Sapma" : 18.384776310850235,
+              "id" : "160201099",
+              "name" : "Ahmed Damer",
+              "proje" : "",
+              "vize" : "100"
+            },
+            "algo22" : {
+              "Donem_ort" : 88,
+              "Final" : "100",
+              "Harf" : "CC",
+              "Harf_etkisi" : 3.5,
+              "Kredi" : 5,
+              "Ogrenci_standart_sapma" : 57.07106781186546,
+              "Sinif_Ders_Ortalamasi" : 84.4,
+              "Sinif_Standart_Sapma" : 5.091168824543144,
+              "id" : "160201099",
+              "name" : "Ahmed Damer",
+              "proje" : "100",
+              "vize" : "40"
+            },
+            "algo33" : {
+              "Donem_ort" : 70,
+              "Final" : "70",
+              "Harf" : "CB",
+              "Harf_etkisi" : 2,
+              "Kredi" : 6,
+              "Ogrenci_standart_sapma" : 42.928932188134524,
+              "Sinif_Ders_Ortalamasi" : 70.75,
+              "Sinif_Standart_Sapma" : 1.0606601717798212,
+              "id" : "160201099",
+              "name" : "Ahmed Damer",
+              "proje" : "70",
+              "vize" : "70"
+            }
+          },
+          "170201099" : {
+            "Average" : {
+              "Genel_Ortalama" : 3.1,
+              "Toplam_Kredi" : 15
+            },
+            "algo" : {
+              "Donem_ort" : 74,
+              "Final" : "70",
+              "Harf" : "CC",
+              "Harf_etkisi" : 2,
+              "Kredi" : 4,
+              "Ogrenci_standart_sapma" : 42.928932188134524,
+              "Sinif_Ders_Ortalamasi" : 78,
+              "Sinif_Standart_Sapma" : 5.656854249492381,
+              "id" : "170201099",
+              "name" : "Fahed Damer",
+              "proje" : "",
+              "vize" : "80"
+            },
+            "algo22" : {
+              "Donem_ort" : 80.8,
+              "Final" : "100",
+              "Harf" : "BA",
+              "Harf_etkisi" : 3.5,
+              "Kredi" : 5,
+              "Ogrenci_standart_sapma" : 42.92893218813451,
+              "Sinif_Ders_Ortalamasi" : 84.4,
+              "Sinif_Standart_Sapma" : 5.091168824543144,
+              "id" : "170201099",
+              "name" : "Fahed Damer",
+              "proje" : "100",
+              "vize" : "4"
+            },
+            "algo33" : {
+              "Donem_ort" : 71.5,
+              "Final" : "67",
+              "Harf" : "BA",
+              "Harf_etkisi" : 3.5,
+              "Kredi" : 6,
+              "Ogrenci_standart_sapma" : 57.071067811865476,
+              "Sinif_Ders_Ortalamasi" : 70.75,
+              "Sinif_Standart_Sapma" : 1.0606601717798212,
+              "id" : "170201099",
+              "name" : "Fahed Damer",
+              "proje" : "90",
+              "vize" : "66"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Teachers" : {
+    "101010" : {
+      "Ders" : "bulanik",
+      "name" : "yasar",
+      "password" : "aaaa"
+    }
+  },
+  "idDelete" : "-M10x5alQH6ducav7mLl",
+  "idUpdate" : "-M12DXPo2aK5yehNmDBj",
+  "secim" : true,
+  "table" : {
+    "-M1la9MXUq5R_7ZdgnxL" : {
+      "Ders" : "algo",
+      "Dr" : "yasar",
+      "OgrenciSayisi" : "50",
+      "kredi" : "3",
+      "saat" : "saat3",
+      "yil" : "4"
+    },
+    "-M1laKSjUIcbPcPVmXnb" : {
+      "Ders" : "algo22",
+      "Dr" : "yasar",
+      "OgrenciSayisi" : "50",
+      "kredi" : "4",
+      "saat" : "saat4",
+      "yil" : "y4"
+    },
+    "-M1laMdGbIKqwgJdPGKH" : {
+      "Ders" : "algo33",
+      "Dr" : "yasar",
+      "OgrenciSayisi" : "50",
+      "kredi" : "5",
+      "saat" : "saat5",
+      "yil" : "4"
+    },
+    "-M2tyz9FHHGPpYnkrL73" : {
+      "Ders" : "DerslerA",
+      "Dr" : "yasar",
+      "OgrenciSayisi" : "40",
+      "kredi" : "3",
+      "saat" : "saat2",
+      "yil" : "4"
+    }
+  }
+}

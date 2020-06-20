@@ -1,0 +1,196 @@
+<style>.example-card {
+    max-width: 350px;
+    max-height: 200px;
+    text-align: center;
+}
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    text-align: center;
+}
+img
+{
+    height:100px
+}
+mat-grid-tile {
+    margin-right: 200px;
+    display: inline;
+}
+div.grid
+{
+margin-left: 300px;
+    margin-top: 40px;
+}
+a:link{
+    text-decoration: none;
+
+}
+mat-card.example-card
+{
+    border-radius: 15%;
+    background-size: cover;
+}
+.back_ground
+{
+    background: url('../../assets/images/background.jpg');
+    height: 1000px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.academic
+{
+    background: url('../../assets/images/akademic.jpg');
+    background-size: cover;
+    text-align: center;
+}
+.student
+{
+    background: url('../../assets/images/student.jpg');
+    background-size: cover;
+    text-align: center;
+}
+.idari
+{
+    background: url('../../assets/images/idari.png');
+    background-size: cover;
+    text-align: center;
+}
+.ogrenciisleri
+{
+    background: url('../../assets/images/ogrenciler.png');
+    background-size: cover;
+    text-align: center;
+}
+.damascus
+{
+    background: url('../../assets/images/dmlogo.png');
+    background-size: cover;
+    text-align: center;
+}
+body {
+    margin:0px;
+    font-family:"Open Sans",sans-serif;
+  }
+  #context-menu {
+    position:absolute;
+    z-index:10000;
+    width:200px;
+    background:#1b1a1a;
+    border-radius:5px;
+    transform:scale(0);
+    /* transform-origin:top left; */
+  }
+  #context-menu.active {
+    transform:scale(1);
+    transition:transform 300ms ease-in-out;
+  }
+  #context-menu .item {
+    padding:8px 10px;
+    font-size:15px;
+    color:#eee;
+  }
+  #context-menu .item:hover {
+    background:#555;
+    
+  }
+  #context-menu .item span {
+    display:inline-block;
+    margin-right:5px;
+  }
+  #context-menu hr {
+    margin:2px 0px;
+    border-color:#555;
+  
+  }
+  .pointer
+  {
+      cursor: pointer;
+  }
+  .timage,.simage,.iimage,.oislerimage,.anasayfa{
+      background-image: url('../../assets/images/akademic.jpg');
+      width: 30px;
+      height:100%;
+      background-repeat: no-repeat;
+      background-size: contain, cover;
+     
+  }
+  .simage{
+      background-image: url('../../assets/images/student.jpg');
+    
+  }
+  .iimage{
+      background-image: url('../../assets/images/idaric.jpg');
+  }
+  .oislerimage{
+      background-image: url('../../assets/images/ogrenciisleris.jpg');
+  }
+
+  .anasayfa{
+    background-image: url('../../assets/images/background.jpg');
+  height: 200px;
+    
+  }
+  </style>
+
+<router-outlet>
+
+    <div id="context-menu"  style="position: absolute;text-align: center;">
+        <div class="item pointer" (click)="student()" >
+           
+            <div class="simage" style="position: absolute;left: 1px ;">
+               
+             
+            </div>
+           Öğrenci Kısımı
+             
+        
+    </div>
+    <hr>
+    <div class="item pointer" (click)='akademikkismi()' >
+           
+        <div class="timage" style="position: absolute;left:+1px ;">
+           
+         
+        </div> Akademik kısmı
+        
+         
+    
+    </div>
+    <hr>
+    <div class="item pointer" (click)='idarikismi()' >
+           
+    <div class="iimage" style="position: absolute;left:+1px ;">
+       
+     
+    </div> İdari Kısmı
+    
+     
+    
+    </div>
+    <hr>
+    <div class="item pointer" (click)='isler()' >
+           
+    <div class="oislerimage" style="position: absolute;left:+1px ;">
+       
+     
+    </div> Öğrenci İşleri
+    </div>
+        <hr>
+
+
+        <div class="item pointer" (click)='AnaSayfa()' >
+           
+            <div class="anasayfa" style="position: absolute;left:+1px ; height: 100px;">
+               
+             
+            </div> Ana Sayfa
+            </div>
+                <hr>
+
+
+       
+      </div>
+
+
+</router-outlet>

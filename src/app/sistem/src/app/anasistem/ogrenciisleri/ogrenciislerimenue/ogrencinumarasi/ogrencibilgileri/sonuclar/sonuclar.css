@@ -1,0 +1,21 @@
+.tb {
+    border-radius: 20%;
+    border-collapse: separate; 
+    border: 1px solid black;
+    width: auto;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 0px;
+    /* text-align: center; */
+}
+*{
+    text-align: center;
+}
+td,tr {
+   /* text-align: center; */
+    width: auto;
+    padding: 20px;    
+  
+    
+}
+

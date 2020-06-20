@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body style="background-color: blanchedalmond">
+<div id="rcorners2">
+    <h1 id="ab">Öğrenci Yeni Kayıt</h1>
+    <img src="../../../assets/images/ogrenciisleris.jpg" height="90px" width="90px"
+         style="margin-left: 50%">
+    <div class="container">
+        <form action="/action_page.php" class="was-validated">
+            <div class="form-group" >
+                <input type="text" class="form-control" id="name" placeholder="AD" name="uname"
+                       required >
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="surename" placeholder="Soyad" name="uname"
+                       required >
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="num"
+                       placeholder="ogrenci numarasi" name="pswd"
+                       required >
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pwd" placeholder="password" name="pswd"
+                       required >
+            </div>
+<h1>Kayıt Tarihi</h1>
+            <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" placeholder="Doğum Tarihi"
+                        id="birthdate">
+                <mat-datepicker #picker ></mat-datepicker>
+            </mat-form-field>
+            <button mat-raised-button (click)="picker.open()">Doğum Tarihi</button>
+
+
+
+            <mat-grid-list cols="3" rowHeight="5:1">
+                <mat-grid-tile> <h3>Cinsiyet :</h3>
+                    <mat-form-field style="width: 70%; ">
+                        <mat-label>Cinsiyet</mat-label>
+                        <mat-select >
+                            <mat-option *ngFor="let c of cinsiyet" [value]="c.value.toString()"
+                                       
+                                        (click)="get_g(c.value)">
+                                {{c.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field></mat-grid-tile>
+              
+              
+              
+                    <mat-grid-tile>
+                        <h3>Yıl :     </h3>
+                        <mat-form-field style="width: 70%; ">
+                            <mat-label>Yıl</mat-label>
+                            <mat-select >
+                                <mat-option *ngFor="let c of yil" [value]="c.value.toString()"
+                                            
+                                            (click)="y=c.value">
+                                    {{c.value}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+
+                    </mat-grid-tile>
+
+                    
+                    <mat-grid-tile>
+                        <h4>Ogretim Turu :     </h4>
+                        <mat-form-field >
+                            <mat-label>Ogretim Turu</mat-label>
+                            <mat-select >
+                                <mat-option *ngFor="let c of sinif" 
+                                           
+                                            (click)="ogretim=c.value"  [value]="c.value.toString()" >
+                                     {{c.value}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+
+                    </mat-grid-tile>
+
+
+              </mat-grid-list>
+
+           
+
+
+
+
+
+
+            
+
+
+
+    <div class="form-group">
+                <textarea type="text" class="form-control" id="address"
+                          placeholder="Adress" name="uname"
+                          required ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary"  id="kaydet" (click)="kaydet()"><h1>Kaydet</h1></button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

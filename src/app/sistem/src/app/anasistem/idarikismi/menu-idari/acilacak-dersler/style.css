@@ -1,0 +1,36 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
+
+  .Ac
+  {
+margin: 20px;
+  }
+  .scclass{
+    overflow: scroll;
+  }
+  #containerf>*
+  {
+    margin: 20px;
+   
+  }
+  .matclass{
+cursor: pointer;
+position: relative;
+top: 5px;
+  }
+
+
+  .Ac2
+  {
+margin: 20px;
+  }

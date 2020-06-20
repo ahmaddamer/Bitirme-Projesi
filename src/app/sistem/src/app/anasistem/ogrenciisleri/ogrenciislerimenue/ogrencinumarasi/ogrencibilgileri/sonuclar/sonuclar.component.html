@@ -1,0 +1,183 @@
+<!-- 
+
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Öğrenci Bilgileri</a>
+    <button class="navbar-toggler collapsed"
+            type="button" data-toggle="collapse"
+            data-target="#navbarsExample01"
+            aria-controls="navbarsExample01"
+            aria-expanded="true"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link"
+                   href="anasistem/isler/ogrenciIsleriMenue/ogrencinumarasi/ogrencibilgileri/">
+                    Ana Sayfa
+                    <span class="sr-only">
+                        (current)
+                </span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com"
+                   id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="true">Tıklayınız</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" [routerLink]="['sonuclar']">Dönem sonuçları</a>
+                    <a class="dropdown-item" [routerLink]="['../borc']">Borç Durumu</a>
+                    <a class="dropdown-item" (click)="extra()" style="cursor: pointer">Diğerler</a>
+                    <a class="dropdown-item" (click)="geri()" style="cursor: pointer"
+                    >çıkış</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav> 
+
+
+
+
+<button class="material-icons" (click)="printf()">
+    print
+</button>
+
+
+ <mat-grid-list cols="2" rowHeight="1:1" [gutterSize]="'10px'">
+   
+
+ <div *ngFor="let i of T" style="margin-left: 20px;">
+    <mat-grid-tile style="margin: 0;padding:0">
+    <table border="4"  style="text-align: center;" class="tb">
+        <h3 style="text-align: center;">GÜZ ({{i}})</h3> 
+  <hr>
+   <table  style="text-align: center;" >
+    <tr style="width: 100%;">
+      
+        <th style="text-align: center;">Ders</th> 
+        <th style="text-align: center;">HARF</th> 
+        <th style="text-align: center;">KREDI</th> 
+        </tr>
+        *ngIf="i===i1.tarih"
+    <tr  style="width: 100%;" *ngFor="let i1 of L|async">
+<ng-container *ngIf="i===i1.tarih">
+    
+<td style=" direction: ltr;" > {{i1.ders_adi}}</td>
+  <td style="text-align: center;">  {{i1.a_node.Harf}} </td> 
+  <td style=" direction: rtl;">  {{i1.a_node.Kredi}}</td>
+</ng-container>
+    </tr>        
+
+    
+    </table>
+</table>
+</mat-grid-tile>
+
+    
+   
+    
+    
+    
+    
+
+
+<mat-grid-tile>
+    <table border="4"  style="text-align: center;" class="tb">
+        <h3 style="text-align: center;">BAHAR ({{i}})</h3> 
+  <hr>
+   <table  style="text-align: center;" >
+    <tr style="width: 100%;">
+      
+        <th style="text-align: center;">Ders</th> 
+        <th style="text-align: center;">HARF</th> 
+        <th style="text-align: center;">KREDI</th> 
+        </tr>
+        *ngIf="i===i1.tarih"
+    <tr  style="width: 100%;" *ngFor="let i1 of L2|async">
+<ng-container *ngIf="i===i1.tarih">
+    
+<td style="text-align: center;" > {{i1.ders_adi}} </td>
+  <td style="text-align: center;">  {{i1.a_node.Harf}} </td> 
+  <td style="text-align: center;">  {{i1.a_node.Kredi}}</td>
+</ng-container>
+    </tr>        
+
+    
+    </table>
+</table>
+</mat-grid-tile>
+
+</div>
+    
+   
+
+</mat-grid-list>
+
+
+</body> -->
+
+<style>
+    td{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    th{
+        font-weight: bolder;
+        font-size: 20px;
+    }
+</style>
+    
+    <body style="overflow: scroll;">
+<div style="color: red; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">
+ Genel Ortalama:   {{TpOrtalam}} 
+</div>
+<div style="color: red; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">
+Toplam Kredi: {{TpKredi}}
+</div>
+<hr>
+<div style="height: 200px;width: 100%;"></div>
+
+<br>
+        <mat-grid-list cols="2" rowHeight="1:1" style="overflow: visible;"  [gutterSize]="'5px'">
+          
+<span *ngFor="let y of years" style="margin: 0;">
+
+<span *ngFor = "let d of donemler;let ind = index">
+    <mat-grid-tile style="overflow: visible;">
+<table border="4" style=" 
+border-radius: 10%;border-collapse: separate;  ">
+ <span style="font-weight: bolder;text-align: center;"><u>{{y}}</u></span>
+ <div style="font-weight: bold;text-align: center;"><u>{{d}}</u></div>
+ <br>
+ <hr>
+ <br>
+    <table  style="margin:auto 50px;" >
+   
+   <tr>
+    <th style="text-align: center;">Ders</th>
+   <th style="text-align: center;">Kredi</th>
+   <th style="text-align: center;">Harf</th>
+</tr>
+<br>
+   <hr>
+   <br>
+   <tr *ngFor="let i of sc">
+   <td style="text-align: center;" *ngIf = "i.donem===d"> {{i.ders}}</td>
+<td style="text-align: center;"  *ngIf = "i.donem===d"> {{i.kredi}}</td>
+<td style="text-align: center;"  *ngIf = "i.donem===d"><span style="width: 7px;"></span>  {{i.harf}}</td>
+   </tr>
+   <br>
+   <hr>
+   <span style="color: brown;font-family: fantasy;font-weight: bold;"> Donem Ortalaması: {{Dortala[ind]}}
+
+   </span> <span style="position: relative; left:20px; color: brown;font-family: fantasy;font-weight: bold;">Kredi : {{Dkredi[ind]}}</span>
+</table>
+</table>
+</mat-grid-tile>
+</span>
+</span>
+</mat-grid-list>
+</body>

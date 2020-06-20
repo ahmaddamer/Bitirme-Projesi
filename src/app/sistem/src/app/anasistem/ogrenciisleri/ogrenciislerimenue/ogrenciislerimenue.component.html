@@ -1,0 +1,52 @@
+<body >
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches"
+     style="background-color: whitesmoke">
+    <mat-toolbar color="primary" class="example-toolbar" style="background-color: black">
+        <button mat-icon-button (click)="snav.toggle()" style="background-color: black">
+            <mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">Öğrenci işleri İşlemleri</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0" >
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                     [fixedInViewport]="mobileQuery.matches"
+                     fixedTopGap="56" style="width: 90%; background-color: burlywood">
+<div style="margin-top: 20px; height: 100px" >
+
+    <a [routerLink]= "['yenikayit']" style=" text-decoration: none; ">
+
+        <button mat-button style="width: 100%; height: 100%; " class="yenikayit">
+
+
+<h1>Yeni Öğrenci Kayıt</h1>
+            </button>
+
+    </a>
+</div>
+
+            <div style="margin-top: 20px; height: 100px" >
+
+                <a [routerLink]= "['ogrencinumarasi']" style=" text-decoration: none; ">
+
+                    <button mat-button style="width: 100%; height: 100%; " class="belgevermek">
+
+
+                        <h1>Belge Vermek</h1>
+                    </button>
+
+                </a>
+            </div>
+
+
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <p *ngFor="let content of fillerContent">{{content}}</p>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+
+</body>

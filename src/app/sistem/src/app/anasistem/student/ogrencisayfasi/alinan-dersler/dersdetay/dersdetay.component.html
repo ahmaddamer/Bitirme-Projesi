@@ -1,0 +1,209 @@
+
+<style>
+  td,th{
+    text-align: center;
+    width: 200px;
+  }
+</style>
+
+
+
+
+
+<div >
+
+<h1 mat-dialog-title>{{Ders}} Detayları</h1>
+<div mat-dialog-content style="width: auto;">
+    <table style="width: 80%;" border="1">
+        <tr>
+
+            <th>Vize</th>
+            <th *ngIf="projeorisnot===true">Proje</th>
+            <th>Final</th>
+            <th>Büt</th>
+
+        </tr>
+        <tr>
+          <td > {{vize}}
+             <span style="margin-left: 5px;">({{vizeEtkisi}} %)</span></td>
+
+  <td *ngIf="projeorisnot===true" >{{proje}}
+     <span style="margin-left: 5px;">({{projeEtkisi}} %)</span></td>
+  <td > {{final}} <span style="margin-left: 5px;">
+    ({{finalEtkisi}} %)</span></td>
+    <td > {{But}} <span style="margin-left: 5px;">
+      ({{finalEtkisi}} %)</span></td>
+
+
+
+</tr>
+</table>
+<div *ngIf="IsthereOdev==='true'" style="height: 40px;"></div>
+<hr *ngIf="IsthereOdev==='true'">
+
+<table *ngIf="IsthereOdev==='true'"  border="2">
+
+       <!-- <th>OdevPuan</th> -->
+<th>Odev Etkisi</th>
+<th>Odev Puanı</th>
+<tr *ngFor="let o of Odevler;let j=index">
+<td >
+{{Odevler[j]}}
+
+</td>
+<td >
+  {{ OdevPuani[j]}}
+
+  </td>
+</tr>
+        </table>
+
+
+</div>
+<br><br>
+<hr>
+<br><br>
+<h1>Ders İçereği : </h1>
+<br>
+<br>
+<hr>
+<br>
+<div style="height: 60%;width: 100%;"></div>
+<div>
+    1. Hafta:
+Dersin içeriği, giriş, kaynaklar
+2. Hafta:
+Yapay Sinir Ağlarına (YSA) Giriş Sinir Ağları (SA)Nedir YSA’nın Genel Özellikleri
+3. Hafta:
+YSA Model Yapısı YSA ‘da Katman Yapısı
+4. Hafta:
+YSA ‘nın Bağlanış Biçimleri YSA ile İlgili Bazı Problemler ve Çözümleri
+5. Hafta:
+YSA’da Öğrenme Stratejileri Eğiticisiz Öğrenme Pekiştirmeli Öğrenme Eğiticili Öğrenme Geriye Yayınım (GY) Eğitim Yöntemi
+6. Hafta:
+Transpoze Ağ Yapısı Momentumlu BP Yöntemi
+7. Hafta:
+Eğitme Yönteminde Farklı Modlar Ardışıl Mod Yığın Mod
+8. Hafta:
+Ara sınav/Değerlendirme
+9. Hafta:
+ARA SINAV
+10. Hafta:
+Geri-Beslemeli (FB) SA BP Metodunun FBNN’a Uygulanması
+11. Hafta:
+Ayrık-Dinamik SA Uygulamalar Sistem tanıma Problemi
+12. Hafta:
+Kontrol Problemi İşaret İşleme Uygulamaları
+13. Hafta:
+Matlab Yazılımıyla YSA Uygulamaları
+14. Hafta:
+YSA ile Sınıflama
+15. Hafta:
+Özel uygulamalar
+16. Hafta:
+Yarıyıl sonu sınavı
+1. Hafta:
+Dersin içeriği, giriş, kaynaklar
+2. Hafta:
+Yapay Sinir Ağlarına (YSA) Giriş Sinir Ağları (SA)Nedir YSA’nın Genel Özellikleri
+3. Hafta:
+YSA Model Yapısı YSA ‘da Katman Yapısı
+4. Hafta:
+YSA ‘nın Bağlanış Biçimleri YSA ile İlgili Bazı Problemler ve Çözümleri
+5. Hafta:
+YSA’da Öğrenme Stratejileri Eğiticisiz Öğrenme Pekiştirmeli Öğrenme Eğiticili Öğrenme Geriye Yayınım (GY) Eğitim Yöntemi
+6. Hafta:
+Transpoze Ağ Yapısı Momentumlu BP Yöntemi
+7. Hafta:
+Eğitme Yönteminde Farklı Modlar Ardışıl Mod Yığın Mod
+8. Hafta:
+Ara sınav/Değerlendirme
+9. Hafta:
+ARA SINAV
+10. Hafta:
+Geri-Beslemeli (FB) SA BP Metodunun FBNN’a Uygulanması
+11. Hafta:
+Ayrık-Dinamik SA Uygulamalar Sistem tanıma Problemi
+12. Hafta:
+Kontrol Problemi İşaret İşleme Uygulamaları
+13. Hafta:
+Matlab Yazılımıyla YSA Uygulamaları
+14. Hafta:
+YSA ile Sınıflama
+15. Hafta:
+Özel uygulamalar
+16. Hafta:
+Yarıyıl sonu sınavı
+1. Hafta:
+Dersin içeriği, giriş, kaynaklar
+2. Hafta:
+Yapay Sinir Ağlarına (YSA) Giriş Sinir Ağları (SA)Nedir YSA’nın Genel Özellikleri
+3. Hafta:
+YSA Model Yapısı YSA ‘da Katman Yapısı
+4. Hafta:
+YSA ‘nın Bağlanış Biçimleri YSA ile İlgili Bazı Problemler ve Çözümleri
+5. Hafta:
+YSA’da Öğrenme Stratejileri Eğiticisiz Öğrenme Pekiştirmeli Öğrenme Eğiticili Öğrenme Geriye Yayınım (GY) Eğitim Yöntemi
+6. Hafta:
+Transpoze Ağ Yapısı Momentumlu BP Yöntemi
+7. Hafta:
+Eğitme Yönteminde Farklı Modlar Ardışıl Mod Yığın Mod
+8. Hafta:
+Ara sınav/Değerlendirme
+9. Hafta:
+ARA SINAV
+10. Hafta:
+Geri-Beslemeli (FB) SA BP Metodunun FBNN’a Uygulanması
+11. Hafta:
+Ayrık-Dinamik SA Uygulamalar Sistem tanıma Problemi
+12. Hafta:
+Kontrol Problemi İşaret İşleme Uygulamaları
+13. Hafta:
+Matlab Yazılımıyla YSA Uygulamaları
+14. Hafta:
+YSA ile Sınıflama
+15. Hafta:
+Özel uygulamalar
+16. Hafta:
+Yarıyıl sonu sınavı
+1. Hafta:
+Dersin içeriği, giriş, kaynaklar
+2. Hafta:
+Yapay Sinir Ağlarına (YSA) Giriş Sinir Ağları (SA)Nedir YSA’nın Genel Özellikleri
+3. Hafta:
+YSA Model Yapısı YSA ‘da Katman Yapısı
+4. Hafta:
+YSA ‘nın Bağlanış Biçimleri YSA ile İlgili Bazı Problemler ve Çözümleri
+5. Hafta:
+YSA’da Öğrenme Stratejileri Eğiticisiz Öğrenme Pekiştirmeli Öğrenme Eğiticili Öğrenme Geriye Yayınım (GY) Eğitim Yöntemi
+6. Hafta:
+Transpoze Ağ Yapısı Momentumlu BP Yöntemi
+7. Hafta:
+Eğitme Yönteminde Farklı Modlar Ardışıl Mod Yığın Mod
+8. Hafta:
+Ara sınav/Değerlendirme
+9. Hafta:
+ARA SINAV
+10. Hafta:
+Geri-Beslemeli (FB) SA BP Metodunun FBNN’a Uygulanması
+11. Hafta:
+Ayrık-Dinamik SA Uygulamalar Sistem tanıma Problemi
+12. Hafta:
+Kontrol Problemi İşaret İşleme Uygulamaları
+13. Hafta:
+Matlab Yazılımıyla YSA Uygulamaları
+14. Hafta:
+YSA ile Sınıflama
+15. Hafta:
+Özel uygulamalar
+16. Hafta:
+Yarıyıl sonu sınavı
+</div>
+<!-- <div *ngFor="let o of Odevler;let jo = index">
+<div><span>Odev{{jo+1}}</span>{{o}}</div>
+</div> -->
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close] cdkFocusInitial>Çıkış</button>
+</div>
+
+</div>

@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  </style>
+  <body style="height: 4000px;">
+<div >
+
+
+
+    <img (click)="imgclick()" style="cursor: pointer;position: relative;left: 50%;"
+    matTooltip="Google Sheet Şeklinde" 
+        aria-label="Button that displays a tooltip when focused or hovered over"
+    src="https://img.icons8.com/color/48/000000/google-sheets.png"/>
+
+    <span  matTooltip="İstatistikler" 
+    style="display: inline-block;position: relative; left:60%;top: 15px;">
+    <i class="fa fa-bar-chart" 
+  
+    style="font-size:50px;
+    cursor:pointer;width: 40px;height: 40px;" (click)="chart()"></i>
+  </span>
+</div>
+<div style="height: 15px;"></div>
+<hr>
+  <mat-accordion>
+    <div *ngFor="let i of items|async;let j=index" id="tr">
+    <span >
+      <mat-expansion-panel>
+
+      <mat-expansion-panel-header (click)="get_Puan(i,j,i.id)">
+
+        <mat-panel-title>
+         {{i.id}}
+        </mat-panel-title>
+
+        <mat-panel-description>
+          {{i.name}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <mat-label>Vize</mat-label>
+        <input class="dd" matInput type="number"  autocomplete="off" #Vize readonly="{{But}}">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Final</mat-label>
+        <input class="dd" matInput type="number" min="1"   #Final readonly="{{But}}">
+      </mat-form-field>
+      <mat-form-field class="Temp">
+        <mat-label  >Proje</mat-label>
+        <input class="dd" matInput type="number" min="1"   #Proje readonly="{{But}}">
+
+      </mat-form-field>
+      <mat-form-field class="bute" *ngIf="But">
+        <mat-label  >But Pauni</mat-label>
+        <input  matInput type="number" min="1"   [formControl] = "bute">
+
+      </mat-form-field>
+      <br>
+      <div *ngFor="let r of Odevler;let ir=index">
+      <mat-form-field  *ngIf="r!=='Yok'">
+        <mat-label>Odev{{ir+1}}</mat-label>
+        <input class="odevval"  matInput type="number" min="1"
+        placeholder="{{r}} %" readonly="{{But}}">
+
+      </mat-form-field>
+    </div>
+      <br>
+
+
+       <button mat-button
+       (click)="get_ID(i,Vize.value,Proje.value,Final.value,j)"
+       class="btn btn-danger">Gir</button>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" >
+
+    </mat-expansion-panel>
+  </span>
+  </div>
+
+  </mat-accordion>
+
+
+
+</body>

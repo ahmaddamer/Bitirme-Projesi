@@ -1,0 +1,68 @@
+<div style="margin-top:5px;width: 100%; height: 100px; background-color: aquamarine;  display: flex;justify-content: space-around;">
+
+<button type="button"  class="btn btn-warning" style="width: 200px;" (click)="cikis()">Çıkış</button>
+<button type="button"   style="width:200px" (click)="onay()" id="onay">Onay</button>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------
+--------------------------------------------------->
+<!--secim dersleri Body-->
+<!--Start=--------->
+
+<table class="table table-dark">
+  <thead>
+    <tr style="text-align: center;">
+      <th scope="col" style="text-align: center;">#</th>
+      <th scope="col" style="text-align: center;">Ders</th>
+      <th scope="col" style="text-align: center;">Dr</th>
+      <th scope="col" style="text-align: center;">kredi</th>
+      <th scope="col" style="text-align: center;">saat</th>
+      <th scope="col" style="text-align: center;">yil</th>
+      <th scope="col" style="text-align: center;">Kapasite / Alan sayisi</th>
+      <th scope="col" style="text-align: center;">Secme/Silme</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr *ngFor="let item of items | async; let i=index" style="text-align: center;">
+     
+      <th scope="row" style="text-align: center;" *ngIf ="item.yil<=(get_yil|async)">{{i+1}}</th>
+      <td style="text-align: center;" *ngIf ="item.yil<=(get_yil|async)" >{{item.Ders}}</td>
+     
+      <td style="text-align: center;" *ngIf ="item.yil<=(get_yil|async)">{{item.Dr}}</td>
+      <td style="text-align: center;" *ngIf ="item.yil<=(get_yil|async)">{{item.kredi}}</td>
+      <td style="text-align: center;" *ngIf ="item.yil<=(get_yil|async)">{{item.saat}}</td>
+      <td style="text-align: center;" *ngIf ="item.yil<=(get_yil|async)">{{item.yil}}</td>
+      
+   
+      <td style="text-align: center;color: white;display: inline-flex;" *ngIf ="item.yil<=(get_yil|async)">
+    <h5 style="color:crimson;font-weight: bolder;"> {{fullOgrenciSayisi[item.Ders]}}</h5>  /    <span> {{item.OgrenciSayisi}}</span> </td>
+     
+    <td  *ngIf ="item.yil<=(get_yil|async)"  >   
+    <span *ngIf="btnlar[item.Ders]!==true"> 
+      <button *ngIf ="item.yil<=(get_yil|async)"  type="button" class="btn btn-primary"
+      (click)="b_func(i)" style="width: 100px;" >
+      
+      Ekleme</button>
+    </span> 
+
+    <span *ngIf="btnlar[item.Ders]===true"> 
+      <button *ngIf ="item.yil<=(get_yil|async)"  type="button" class="btn btn-primary"
+      (click)="b_func(i)" style="width: 100px;" class="btn btn-danger" >
+      
+      Silme</button>
+    </span> 
+
+    </td> 
+    <!-- {{control(item.Ders,i)}} -->
+    </tr>
+    
+    
+  </tbody>
+ 
+</table>
+
+
+
+
+

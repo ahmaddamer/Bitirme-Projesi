@@ -1,0 +1,81 @@
+<html>
+<style>
+    .example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-option-img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+[dir='rtl'] .example-option-img {
+  margin-right: 0;
+  margin-left: 8px;
+}
+</style>
+<title>
+    Message
+</title>
+<body style="background-color: darkgray; margin: 0;">
+
+  <form class="example-form" style="position: relative ; left: 200px; top: 50px;">
+  
+    <mat-form-field class="example-full-width">
+      <input matInput
+             placeholder="Konu"
+             aria-label="State"
+            
+              id="konu">
+</mat-form-field>
+  </form>
+
+
+  <form class="example-form" style="position: relative ; left: 200px; top: 50px;">
+  
+  
+
+  <mat-form-field class="example-full-width">
+      <input matInput
+             placeholder="Email"
+             aria-label="State"
+             [matAutocomplete]="auto"
+             [formControl]="stateCtrl" id="Email">
+
+            
+
+
+           
+          
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let state of filteredStates | async" [value]="state.mail" style="height: auto; width: 100%;" >
+         <div>
+            <img class="example-option-img" aria-hidden [src]="state.resim" height="45">
+          <span style="font-size: 30px;">{{state.name}}</span>
+        </div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  
+    <br>
+  
+  </form>
+  
+
+  <form style="width: 70%; position: relative; top: 100px;left: 200px;">
+  <div class="form-group">
+  <textarea class="form-control"  rows="10" 
+  placeholder="Yaz Burada"  id="msg" ></textarea>
+</div>
+<button type="button" class="btn btn-primary" (click)="send_message()">Gonder</button>
+
+</form>
+
+</body>
+</html>

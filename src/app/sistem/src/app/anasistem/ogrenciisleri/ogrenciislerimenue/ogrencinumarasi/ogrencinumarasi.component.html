@@ -1,0 +1,13 @@
+<form style="margin: 200px">
+    <img src="../../../../../assets/images/student.jpg" width="300px" height="300px">
+    <div class="form-group" style="width: 70%">
+        <label for="exampleInputEmail1">Öğrenci numarası</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" (keyup)  ="kontrol()"
+               aria-describedby="emailHelp" placeholder="Öğrenci Numarası" autocomplete="off">
+        <small id="emailHelp" class="form-text text-muted">Öğrenci numarası yaznınız</small>
+        <div  id="danger"  style="opacity: 90%;">
+           </div>
+    </div>
+    <button  class="btn btn-primary" (click)="database_mi();controlStudentId()" routerLinkActive="active">bilgilere girişi</button>
+</form>
+ng

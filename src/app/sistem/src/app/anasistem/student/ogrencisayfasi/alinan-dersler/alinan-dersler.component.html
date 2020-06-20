@@ -1,0 +1,96 @@
+<style>
+  table {
+width: 100%;
+}
+
+.mat-form-field {
+font-size: 14px;
+width: 50%;
+}
+.pointer
+{
+  cursor: pointer;
+}
+</style>
+
+<div class="mat-elevation-z8" >
+  <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ders Yazınız" 
+      autocomplete="off">
+    </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Ders" >
+      <th mat-header-cell *matHeaderCellDef> Ders </th>
+      <td mat-cell *matCellDef="let element"  matTooltip="{{element.Ders}} detaylarına görmek için Tıklayın" >
+         <a  (click)="openDialog(element)" 
+        class="pointer">{{element.Ders}}</a>  </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Kredi">
+      <th mat-header-cell *matHeaderCellDef> Kredi </th>
+      <td mat-cell *matCellDef="let element"> {{element.Kredi}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Harf">
+      <th mat-header-cell *matHeaderCellDef> Harf </th>
+      <td mat-cell *matCellDef="let element" style="font-weight: bolder;"> 
+        {{element.Harf}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Note">
+      <th mat-header-cell *matHeaderCellDef> Note </th>
+      <td mat-cell *matCellDef="let element"> {{yaklasim(element.Note)}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-form-field>
+      <mat-label>Donmler</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="donem" >
+        <mat-option *ngFor="let donem of Donemler" [value]="donem.viewValue" 
+        (click)='fp(donem.viewValue)'>
+          {{donem.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p style="display: inline;"><b style="position: relative; left: 25px;">Ort: </b> 
+      <span 
+      style="color:rgb(129, 70, 70); font-weight: bold; position: relative; left:40px">
+          {{D_Avg}}</span>
+
+          <b style="position: relative; left: 50px;">Kredi: </b> 
+      <span 
+      style="color:rgb(129, 70, 70); font-weight: bold; position: relative; left:75px">
+          {{T_Kredi}}</span>
+      </p>
+
+<br>
+      <p style="display: inline-block; 
+      font-size: larger;font-weight: bolder; color: red;">Genel Ortalama :
+       {{Genel_ortalama}}</p>
+      <span style="position: relative; left: 40px;font-size: 
+      larger;font-weight: bolder;color: red;">Toplam Kredi: {{Toplam_kredi}}</span>
+</div>
+
+
+
+
+
+
