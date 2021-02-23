@@ -23,12 +23,13 @@
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
     "@ng-bootstrap/ng-bootstrap": "^5.2.1",
+    "@types/jquery": "^3.5.5",
     "angularfire2": "^2.0.0-beta.7.1-pre",
     "bootstrap": "^4.4.1",
     "bootstrap-autocomplete": "^2.3.5",
     "chart.js": "^2.9.3",
     "express": "^4.17.1",
-    "firebase": "^7.8.1",
+    "firebase": "^7.24.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
     "js-cookie": "^2.2.1",
@@ -63,6 +64,11 @@
     "rxjs-compat": "^6.5.4",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "@angular-devkit/architect": "<0.900 || ^0.900.0-0 || ^9.0.0-0",
+    "firebase-tools": "^6.10.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1"
   }
 }
