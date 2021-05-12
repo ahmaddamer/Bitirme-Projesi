@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-material-design": "^4.1.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "firebase": "^7.7.0"
   },
   "devDependencies": {
